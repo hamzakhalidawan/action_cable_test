@@ -1,5 +1,10 @@
 <div id="main">
   <h2>Chat room</h2>
+  <span class="button-div">
+    <%= link_to "Pro", '#', class: 'button-sms', id: 'pro-id' %>
+    <%= link_to "Client", '#', class: 'button-sms', id: 'client-id' %>
+  </span>
+  <span>Unread Messages: <p style="color: black; display: contents !important; width: 50%;" id="count">0</p></span>
   <div id="chat_body">
     <div id="messages">
     </div>

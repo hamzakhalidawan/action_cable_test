@@ -35,8 +35,24 @@ $(document).on('turbolinks:load', function () {
     }
   });
 
+  $('#pro-id').click((e) => {
+    e.preventDefault();
+    console.log("pro button click")
+    sessionStorage.setItem('id', '7478')
+    $("#modal").css('display', 'flex');
+  })
+
+  $('#client-id').click((e) => {
+    e.preventDefault();
+    console.log("client button click")
+    sessionStorage.setItem('id', '7479')
+    $("#modal").css('display', 'flex');
+  })
+
+
   $(window).on('beforeunload', function() {
     let name = sessionStorage.getItem('chat_room_name')
+    $('#count').text('')
     chatRoomChannel.announce({ name, type: 'leave'})
   });
 })
